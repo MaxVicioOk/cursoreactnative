@@ -1,4 +1,5 @@
-import {View, FlatList, Text, Button, StyleSheet} from 'react-native'
+import {View, FlatList, StyleSheet} from 'react-native'
+import MyItem from './MyItem'
 
 export default function ItemList({handleModal, products}) {
     return (
@@ -7,12 +8,9 @@ export default function ItemList({handleModal, products}) {
             data={products}
             keyExtractor={item => item.id}
             renderItem={({item}) => {
-                return <View style={styles.cardProduct}>
-                <Text>{item.title}</Text>
-                <Text>$ {item.price}</Text>
-                <Text>x {item.quantity}</Text>
-                <Button title='  -  ' onPress={() => handleModal(item)}/>
-                </View>}}
+                return (
+                    <MyItem handleModal={handleModal} item={item}/>
+                )}}
             />
         </View>
     )
@@ -24,11 +22,5 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         backgroundColor: '#eee',
-    },
-    cardProduct: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        margin: '5%'
     }
 })

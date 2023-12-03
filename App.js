@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import uuid from 'react-native-uuid';
 import MyModal from './components/MyModal/MyModal';
 import ItemList from './components/ItemList/ItemList';
-import MyItem from './components/MyItem/MyItem';
+import MyInput from './components/MyInput/MyInput';
 
 export default function App() {
   const [newTitle, setNewTitle] = useState('')
@@ -36,7 +36,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <MyItem
+      <MyInput
         setNewTitle={setNewTitle}
         setNewPrice={setNewPrice}
         setNewQuantity={setNewQuantity}

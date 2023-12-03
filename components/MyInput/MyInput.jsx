@@ -1,6 +1,6 @@
 import { View, TextInput, Button, StyleSheet } from 'react-native'
 
-export default function MyItem({ setNewTitle, setNewPrice, setNewQuantity, handelAddProduct, newTitle, newPrice, newQuantity}) {
+export default function MyInput({ setNewTitle, setNewPrice, setNewQuantity, handelAddProduct, newTitle, newPrice, newQuantity}) {
     return (
         <View style={styles.inputContainer}>
             <View style={styles.textInputContainer}>
